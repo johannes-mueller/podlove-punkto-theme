@@ -19,8 +19,10 @@ $e = \Podlove\get_episode();
 		</div>
 		<div id="featured-episode-background" style="background-image: url('<?php echo $e->imageUrlWithFallback() ?>')">
 		</div>
+		<div id="featured-episode-foreground">
+			<?php punktoinfo_episode_nav(); ?>
+		</div>
 	</div>
-	<?php punktoinfo_post_nav(); ?>
 <?php endif ?>
 <div id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">

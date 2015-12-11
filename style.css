@@ -414,6 +414,34 @@ img.title-image {
     text-align: left;
 }
 
+#featured_episode_foreground {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.prev-episode-button {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    top: 50%;
+    left: 0;
+}
+
+
+.next-episode-button {
+    position: absolute;
+    width: 80px;
+    height: 120px;
+    display: block;
+    top: 50%;
+    right: 0;
+}
+
 
 .site-footer {
     margin-top: 1em;

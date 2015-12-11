@@ -34,7 +34,7 @@ function punktoinfo_post_nav() {
 
 	if ( ! $next && ! $previous )
 		return;
-	?>
+?>
 	<nav class="navigation post-navigation" role="navigation">
 		<div class="nav-links">
 
@@ -43,7 +43,32 @@ function punktoinfo_post_nav() {
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
-	<?php
+<?php
+}
+
+function punktoinfo_episode_nav() {
+	global $post;
+
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous )
+		return;
+?>
+
+			<?php if ($previous) :?>
+				<a class="prev-episode-button" href="<?php echo get_permalink($previous) ?>">
+					<img src="/wp-content/themes/punktoinfo/images/prev-button.svg">
+				</a>
+			<?php endif ?>
+			<?php if ($next) :?>
+				<a class="next-episode-button" href="<?php echo get_permalink($next) ?>">
+					<img src="/wp-content/themes/punktoinfo/images/next-button.svg">
+				</a>
+			<?php endif ?>
+
+<?php
 }
 
 function punktoinfo_paging_nav() {
@@ -52,25 +77,23 @@ function punktoinfo_paging_nav() {
 	// Don't print empty markup if there's only one page.
 	if ( $wp_query->max_num_pages < 2 )
 		return;
-	?>
+?>
 	<nav class="navigation paging-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'punktoinfo' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'punktoinfo' ) ); ?></div>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'punktoinfo' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'punktoinfo' ) ); ?></div>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'punktoinfo' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }
-
-
 
 
 function punktoinfo_entry_meta() {
@@ -87,7 +110,7 @@ function punktoinfo_entry_meta() {
 	}
 
 	// Translators: used between list items, there is a space after the comma.
-    $tag_list = get_the_tag_list( '', __( ', ', 'punktoinfo' ) );
+	$tag_list = get_the_tag_list( '', __( ', ', 'punktoinfo' ) );
 	if ( $tag_list ) {
 		echo '<span class="tags-links">' . $tag_list . '</span>';
 	}
@@ -113,48 +136,48 @@ function punktoinfo_entry_date( $echo = true ) {
 }
 
 /*
-function punktoinfo_print_date( $date ) {
-        printf('<img src="/bildoj/icon-calendar-128x128.png" width="16" height="16"> %1$s', $date->format('d.m.Y'));
-}
-*/
+   function punktoinfo_print_date( $date ) {
+           printf('<img src="/bildoj/icon-calendar-128x128.png" width="16" height="16"> %1$s', $date->format('d.m.Y'));
+   }
+ */
 
 function punktoinfo_print_duration( $duration ) {
-        echo '&#x23f1;&nbsp';
-        $h = $duration->hours();
-        if ( $h == 1 ) {
-                printf('1 horo ');
-        } elseif ( $h != 0 ) {
-                printf('%d hours ', $h);
-        }
+	echo '&#x23f1;&nbsp';
+	$h = $duration->hours();
+	if ( $h == 1 ) {
+		printf('1 horo ');
+	} elseif ( $h != 0 ) {
+		printf('%d hours ', $h);
+	}
 
-        $m = $duration->minutes();
-        if ( $m == 1 ) {
-                printf('1 minuto');
-        } elseif ( $m != 0 ) {
-                printf('%d minutoj', $m);
-        }
+	$m = $duration->minutes();
+	if ( $m == 1 ) {
+		printf('1 minuto');
+	} elseif ( $m != 0 ) {
+		printf('%d minutoj', $m);
+	}
 }
 
 add_filter('pre_get_posts', 'only_podcasts_in_archive');
 
 function only_podcasts_in_archive($query)
 {
-        if (is_archive()) {
-                $query->set('post_type', array('post', 'podcast'));
-                $query->set('orderby', 'date');
-                $query->set('order', 'DESC');
+	if (is_archive()) {
+		$query->set('post_type', array('post', 'podcast'));
+		$query->set('orderby', 'date');
+		$query->set('order', 'DESC');
 
-                return $query;
-        }
+		return $query;
+	}
 }
 
 
 function footer_widgets_init() {
 	register_sidebar( array (
 		'name' => 'Footer sidebar',
-		'id' => 'footer_1',
-		'before_widget' => '<div id="%1$s" class="footer-element">',
-		'after_widget' => '</div>'
+			'id' => 'footer_1',
+			'before_widget' => '<div id="%1$s" class="footer-element">',
+			'after_widget' => '</div>'
 	) );
 }
 
@@ -163,7 +186,7 @@ add_action( 'widgets_init', 'footer_widgets_init' );
 
 
 function punktoinfo_theme_options_page() {
-    add_theme_page( 'Options', 'Options', 'edit_theme_options', 'punktoinfo-options-page', 'punktoinfo_options_page' );
+	add_theme_page( 'Options', 'Options', 'edit_theme_options', 'punktoinfo-options-page', 'punktoinfo_options_page' );
 }
 
 add_action( 'admin_menu', 'punktoinfo_theme_options_page' );
@@ -212,18 +235,18 @@ function punktoinfo_options_page() {
                $_REQUEST['settings-updated'] = false;
        }
 ?>
-	<div class="wrap">
-		<h2>Punktoinfo Options</h2>
-		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
-			<div class="updated fade">
-				<p><strong>Einstellungen gespeichert!</strong></p>
-			</div>
-		<?php endif; ?>
-		<form action="options.php" method="POST">
-			<?php settings_fields( 'punktoinfo-settings-group' ); ?>
-			<?php do_settings_sections( 'punktoinfo-options-page' ); ?>
-			<?php submit_button(); ?>
-		</form>
-	</div>
+<div class="wrap">
+	<h2>Punktoinfo Options</h2>
+	<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
+		<div class="updated fade">
+			<p><strong>Einstellungen gespeichert!</strong></p>
+		</div>
+	<?php endif; ?>
+	<form action="options.php" method="POST">
+		<?php settings_fields( 'punktoinfo-settings-group' ); ?>
+		<?php do_settings_sections( 'punktoinfo-options-page' ); ?>
+		<?php submit_button(); ?>
+	</form>
+</div>
 <?php
 }
