@@ -321,6 +321,9 @@ img.title-image {
 	width: 100%;
 }
 
+.entry-meta .date a:before {
+	content: "\f305";
+}
 
 .site-content {
     max-width: 800px;
