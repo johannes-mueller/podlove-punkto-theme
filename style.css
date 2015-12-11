@@ -363,6 +363,15 @@ img.title-image {
     margin: 10px;
 }
 
+img.episode-tile-image {
+    opacity: 1.;
+    transition: opacity 0.25s;
+}
+
+img.episode-tile-image:hover {
+    opacity: .7;
+}
+
 .podlove-contributors-table {
     margin-top: 1em;
     width: 100%;

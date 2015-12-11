@@ -20,7 +20,7 @@ shuffle($eps);
 			?>
 				<div class="episode-tile">
 					<a href="<?php echo $e->url() ?>">
-						<img src="<?php echo $e->imageUrlWithFallback() ?>" width="160" height="160">
+						<img class="episode-tile-image" src="<?php echo $e->imageUrlWithFallback() ?>" width="160" height="160">
 					</a>
 					<?php
 					$i++;
