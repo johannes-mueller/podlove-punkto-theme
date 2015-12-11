@@ -59,12 +59,12 @@ function punktoinfo_episode_nav() {
 
 			<?php if ($previous) :?>
 				<a class="prev-episode-button" href="<?php echo get_permalink($previous) ?>">
-					<img src="/wp-content/themes/punktoinfo/images/prev-button.svg">
+					<img class="prev-button-image" src="/wp-content/themes/punktoinfo/images/prev-button.svg">
 				</a>
 			<?php endif ?>
 			<?php if ($next) :?>
 				<a class="next-episode-button" href="<?php echo get_permalink($next) ?>">
-					<img src="/wp-content/themes/punktoinfo/images/next-button.svg">
+					<img class="next-button-image" src="/wp-content/themes/punktoinfo/images/next-button.svg">
 				</a>
 			<?php endif ?>
 

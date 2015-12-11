@@ -423,15 +423,27 @@ img.title-image {
     height: 100%;
 }
 
-
 .prev-episode-button {
     position: absolute;
     width: 80px;
-    height: 120px;
     top: 50%;
     left: 0;
 }
 
+.prev-button-image, .next-button-image {
+    transition: opacity 0.25s, margin 0.25s;
+    opacity: 0.6;
+}
+
+.prev-button-image:hover {
+    margin-right: 6px;
+    opacity: 1.0;
+}
+
+.next-button-image:hover {
+    margin-left: 6px;
+    opacity: 1.0;
+}
 
 .next-episode-button {
     position: absolute;
