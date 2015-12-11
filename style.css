@@ -1,0 +1,556 @@
+/*
+ Theme Name:   punkto.info podcasting theme
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Twenty Fifteen Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     twentythirteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  punktoinfo
+*/
+
+@import url("../twentythirteen/style.css");
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic&subset=latin,latin-ext');
+@import url("../twentythirteen/genericons/genericons.css");
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+h1 {
+	font-size: x-large;
+	margin: 33px 0;
+}
+
+h2 {
+	font-size: larger;
+	margin: 25px 0;
+}
+
+h3 {
+	font-size: large;
+	margin: 22px 0;
+}
+
+em {
+    font-style: italic;
+    font-size: 100%;
+}
+
+.color-primary-0 { color: #924F00 }	/* Main Primary color */
+.color-primary-1 { color: #DF7900 }
+.color-primary-2 { color: #B66300 }
+.color-primary-3 { color: #693900 }
+.color-primary-4 { color: #3A1F00 }
+
+.color-secondary-1-0 { color: #926A00 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #DFA200 }
+.color-secondary-1-2 { color: #B68500 }
+.color-secondary-1-3 { color: #694D00 }
+.color-secondary-1-4 { color: #3A2A00 }
+
+.color-secondary-2-0 { color: #922100 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #DF3200 }
+.color-secondary-2-2 { color: #B62900 }
+.color-secondary-2-3 { color: #691800 }
+.color-secondary-2-4 { color: #3A0D00 }
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #3A1F00;
+}
+
+a:visited {
+    color: #926A00;
+}
+
+a:hover {
+    color: #B62900;
+    text-decoration: none;
+}
+
+a:active {
+    color: #DF3200;
+}
+
+
+
+/* Colors */
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	background: #3A1F00;
+	color: #fff;
+	border: none;
+}
+
+
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus {
+	background: #B62900; /* Old browsers */
+	outline: none;
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+    background: #DF7900; /* Old browsers */
+    border: none;
+}
+
+
+.comment-author .fn,
+.comment-author .url,
+.comment-reply-link,
+.comment-reply-login {
+	color: #3A1F00;
+}
+
+.comment-meta a:hover {
+	color: #B62900;
+}
+
+.comment-respond {
+	background-color: white;
+	padding: 30px 0;
+}
+
+.comment-reply-title {
+	font: 300 normal 28px "Open Sans", Helvetica, sans-serif;
+}
+
+.comment-form .required {
+    color: #DF3200;
+}
+
+.widget {
+    background-color: #3A1F00;
+	font-size: 14px;
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	margin: 0 0 24px;
+	padding: 20px;
+	word-wrap: break-word;
+}
+
+.widget .widget-title {
+	font: 300 normal 20px "Open Sans", Helvetica, sans-serif;
+	margin: 0 0 10px;
+}
+
+
+
+
+/*
+#wrapper {
+    display: block;
+    width:90%;
+    margin:0px auto;
+}
+*/
+
+.site-header {
+    text-align: center;
+}
+
+.site-header .home-link {
+    min-height: 0px;
+}
+
+.contact-button-bar {
+    height: 36px;
+    width: 100%;
+    background-color: #3A2A00;
+    padding: 0px;
+    position: fixed;
+}
+
+#contact-button-container {
+    float: right;
+}
+
+ul#contact-buttons {
+    padding: 0px;
+    width: 100%;
+    height: 100%
+    list-style-type: none;
+    list-style: none;
+    display: flex;
+}
+
+ul#contact-buttons li {
+    margin-left: 6px;
+}
+
+ul#contact-buttons li {
+    margin-left: 6px;
+}
+
+ul#contact-buttons li a {
+
+}
+
+a.contact-button  {
+    width: 36px;
+    height: 36px;
+    display: block;
+    background-size: 36px, 36px;
+}
+
+a.podlove-subscribe-button-subscribeButton {
+    height: 36px;
+    width: 120px;
+    display: block;
+    background-size: 120px, 36px;
+}
+
+a.podlove-subscribe-button-subscribeButton {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    background-color: #922100;
+    padding: 0px 6px;
+    margin-right: 0px;
+}
+
+a.podlove-subscribe-button-subscribeButton:hover {
+    background-color: #B62900;
+}
+
+a.podlove-subscribe-button-subscribeButton:active {
+    background-color: #DF3200;
+}
+
+.nav-menu li a {
+	color: #3A1F00;
+	font-size: 15px;
+	display: block;
+	line-height: 1;
+	padding: 15px 20px;
+	text-decoration: none;
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu li a:focus {
+    background-color: #3A1F00;
+	color: #fff;
+}
+
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+	color: #B62900;
+	font-style: normal;
+	font-weight: bold;
+}
+
+
+img.title-image {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 56px;
+    margin-bottom: 20px;
+}
+
+
+.navbar {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #3A1F00;
+    border-bottom: 2px solid #3A1F00;
+    margin-bottom: 1.5em;
+}
+
+#site-navigation {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    max-width: 800px;
+}
+
+
+/* Content */
+
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta {
+    margin: 0 auto;
+    max-width: 100%;
+	width: 100%;
+}
+
+
+.site-content {
+    max-width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.site-content h1 {
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.site-content h2 {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.page-content {
+	margin: 0 auto;
+	padding: 40px 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+
+
+/* Podcast stuff */
+
+.episode-tile {
+    display: inline-block;
+    margin: 10px;
+}
+
+.podlove-contributors-table {
+    margin-top: 1em;
+    width: 100%;
+}
+
+.podlove-contributors-table td {
+    padding: 5px;
+}
+
+.tags-links {
+    font-style: italic;
+}
+
+.tags-links a:first-child:before {
+	content: "\f302";
+	position: relative;
+	top: -1px;
+}
+
+#random-episodes {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#featured-episode {
+    padding: 72px;
+    margin-bottom: 24px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+#featured-episode-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity : 0.4;
+    z-index: -1;
+}
+
+#featured-episode-player {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+.site-footer {
+    margin-top: 1em;
+    margin-bottom: 0px;
+    padding-top: 1em;
+    background-color: #444;
+    color: #ccc;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.site-footer a {
+    text-decoration: none;
+}
+
+.site-footer a:link {
+    color: #eee;
+}
+
+.site-footer a:visited {
+    color: #999;
+}
+
+.site-footer a:hover {
+    color: #fff;
+}
+
+.site-footer a:active {
+    color: #777;
+}
+
+.site-footer h2 {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.site-footer ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.site-footer .widget {
+	width: 100%
+}
+
+
+.footer-elements {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.footer-element {
+    display: inline-block;
+    text-align: left;
+    width: 20%;
+    vertical-align: top;
+}
+
+#tag_cloud-2 {
+    width: 40%;
+}
+
+.footer-element .widgettitle {
+    margin: 0;
+}
+
+.site-info {
+    color: #eee;
+    margin: 12px;
+    text-align: left;
+    font-size: 8pt;
+}
+
+.site-info img {
+    vertical-align: middle;
+}
+
+.page-title,
+.archive-header {
+    background-color: white;
+}
+
+.page-title,
+.archive-title,
+.archive-meta {
+	font: 300 normal 30px "Open Sans", Helvetica, sans-serif;
+}
+
+tr.archive-episode-row {
+    display: table-row;
+    border-top: 1px solid lightgray;
+}
+
+.archive-episode-row .episode-icon {
+    text-align: left;
+}
+.archive-episode-row .episode-title {
+    color: #0199CA;
+    font-size: larger !important;
+    font-weight: bold !important;
+}
+.archive-episode-row .episode-meta {
+    font-weight: bold !important;
+}
+.archive-episode-row .episode-contributor-names {
+    font-weight: bold !important;
+}
+.archive-episode-row div.episode-contributor-avatars {
+    vertica-align: middle;
+}
+.archive-episode-row div.episode-meta {
+    vertical-align: baseline;
+}
+.archive-episode-row img.tiny-icon {
+    vertical-align: -10%;
+}
+.archive-episode-row td {
+    vertical-align: top;
+    padding: 32px 8px 32px 0px;
+}
+
+td.archive-episode-description {
+    width: 50%;
+}
+
+
+.comments-title,
+.comment-list,
+.comment-reply-title,
+.must-log-in,
+.comment-respond .comment-form,
+.comment-respond iframe {
+    width: 100%;
+    max-width: 100%;
+}
