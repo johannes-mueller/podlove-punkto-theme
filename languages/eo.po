@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2015-12-12 10:34+0100\n"
-"PO-Revision-Date: 2015-12-12 10:34+0100\n"
+"POT-Creation-Date: 2015-12-12 14:16+0100\n"
+"PO-Revision-Date: 2015-12-12 14:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: eo\n"
@@ -13,7 +13,23 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_x;_ex;_n:1,2;_nx:1,2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:16
+msgid "— four-O-four — not found — 404"
+msgstr "— kvar-nulo-kvar — netrovite — 404"
+
+#: 404.php:21
+msgid "We don&rsquo;t know who has taken you here."
+msgstr "Ni ne scias kio venigis vin ĉi tien."
+
+#: 404.php:22
+msgid ""
+"Maybe you clicked on a wrong or obselete link?<br>Or typed in a wrong "
+"address?"
+msgstr ""
+"Ĉu vi eblei klakis eksvalidan ligilon?<br>Aŭ tajpis malĝustan adreson?"
 
 #: archive.php:26
 #, php-format
@@ -44,25 +60,24 @@ msgstr "Arkivo"
 
 #: comments.php:25
 #, php-format
-msgctxt "comments title"
 msgid "One comment on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
 msgstr[0] "Unu komento pri &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s komentoj pri &ldquo;%2$s&rdquo;"
 
-#: comments.php:45
+#: comments.php:46
 msgid "Comment navigation"
 msgstr "Komentara navigacio"
 
-#: comments.php:46
+#: comments.php:47
 msgid "&larr; Older Comments"
 msgstr "&larr; Pli malnovaj komentoj"
 
-#: comments.php:47
+#: comments.php:48
 msgid "Newer Comments &rarr;"
 msgstr "Pli novaj komentoj &rarr;"
 
-#: comments.php:52
+#: comments.php:53
 msgid "Comments are closed."
 msgstr "Komentoj fermitaj"
 
@@ -140,3 +155,9 @@ msgstr "Serĉrezultoj por: %s"
 #, php-format
 msgid "Tag Archives: %s"
 msgstr "Etikeda arkivo: %s"
+
+#~ msgctxt "comments title"
+#~ msgid "One comment on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Unu komento pri &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s komentoj pri &ldquo;%2$s&rdquo;"
