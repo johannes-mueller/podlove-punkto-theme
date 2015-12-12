@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2015-12-12 09:48+0100\n"
+"PO-Revision-Date: 2015-12-12 09:51+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: archive.php:26
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Taga arkivo: %s"
+
+#: archive.php:28
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Monata Arkivo: %s"
+
+#: archive.php:30
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Jara arkivo: %s"
+
+#: comments.php:46
+msgid "&larr; Older Comments"
+msgstr "&larr; Pli malnovaj komentoj"
+
+#: comments.php:47
+msgid "Newer Comments &rarr;"
+msgstr "Pli novaj komentoj &rarr;"
+
+#: content.php:32
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Legi pli %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: content.php:36 page.php:21
+msgid "Pages:"
+msgstr "Paĝoj:"
+
+#: functions.php:22
+msgid "Navigation Menu"
+msgstr "Navigacia menuo"
+
+#: functions.php:86
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Pli malnovaj"
+
+#: functions.php:90
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Pli novaj <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:107 functions.php:113
+msgid ", "
+msgstr ", "
+
+#: functions.php:127
+#, php-format
+msgid "Permalink to %s"
+msgstr "Fiksligilo al %s"
+
+#: functions.php:415
+#, php-format
+msgid "Posts published on %s"
+msgstr "Publikigita je %s"
+
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Serĉrezultoj por: %s"
+
+#: tag.php:9
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Etikeda arkivo: %s"
