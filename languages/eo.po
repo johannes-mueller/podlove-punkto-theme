@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2015-12-12 09:48+0100\n"
-"PO-Revision-Date: 2015-12-12 09:51+0100\n"
+"POT-Creation-Date: 2015-12-12 10:14+0100\n"
+"PO-Revision-Date: 2015-12-12 10:17+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: eo\n"
@@ -10,9 +10,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.4\n"
-"X-Poedit-Basepath: .\n"
+"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: archive.php:26
@@ -25,10 +25,26 @@ msgstr "Taga arkivo: %s"
 msgid "Monthly Archives: %s"
 msgstr "Monata Arkivo: %s"
 
+#: archive.php:28
+msgid "F Y"
+msgstr "F Y"
+
 #: archive.php:30
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr "Jara arkivo: %s"
+
+#: archive.php:30
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:32
+msgid "Archives"
+msgstr "Arkivo"
+
+#: comments.php:45
+msgid "Comment navigation"
+msgstr "Komentara navigacio"
 
 #: comments.php:46
 msgid "&larr; Older Comments"
@@ -37,6 +53,10 @@ msgstr "&larr; Pli malnovaj komentoj"
 #: comments.php:47
 msgid "Newer Comments &rarr;"
 msgstr "Pli novaj komentoj &rarr;"
+
+#: comments.php:52
+msgid "Comments are closed."
+msgstr "Komentoj fermitaj"
 
 #: content.php:32
 #, php-format
@@ -51,6 +71,18 @@ msgstr "Paĝoj:"
 msgid "Navigation Menu"
 msgstr "Navigacia menuo"
 
+#: functions.php:41
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: functions.php:42
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:82
+msgid "Posts navigation"
+msgstr "Navigacio"
+
 #: functions.php:86
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Pli malnovaj"
@@ -63,15 +95,33 @@ msgstr "Pli novaj <span class=\"meta-nav\">&rarr;</span>"
 msgid ", "
 msgstr ", "
 
+#: functions.php:121
+#, php-format
+msgid "%1$s on %2$s"
+msgstr "%1$s je %2$s"
+
 #: functions.php:127
 #, php-format
 msgid "Permalink to %s"
 msgstr "Fiksligilo al %s"
 
+#: functions.php:322
+#, php-format
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: functions.php:414
+msgid "F j, Y"
+msgstr "F j, Y"
+
 #: functions.php:415
 #, php-format
 msgid "Posts published on %s"
 msgstr "Publikigita je %s"
+
+#: header.php:97
+msgid "Menu"
+msgstr "Menuo"
 
 #: search.php:18
 #, php-format
