@@ -447,3 +447,6 @@ function punktoinfo_get_episode_calendar( $initial = true, $echo = true ) {
 }
 
 add_filter('get_calendar', 'punktoinfo_get_episode_calendar', 1, 2);
+
+
+load_theme_textdomain( 'punktoinfo', get_template_directory().'/languages/' );
