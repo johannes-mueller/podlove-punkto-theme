@@ -44,6 +44,7 @@ msgstr "Arkivo"
 
 #: comments.php:25
 #, php-format
+msgctxt "comments title"
 msgid "One comment on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
 msgstr[0] "Unu komento pri &ldquo;%2$s&rdquo;"
