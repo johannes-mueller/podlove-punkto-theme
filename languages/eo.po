@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2015-12-12 10:14+0100\n"
-"PO-Revision-Date: 2015-12-12 10:17+0100\n"
+"PO-Revision-Date: 2015-12-12 10:20+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: eo\n"
@@ -23,7 +23,7 @@ msgstr "Taga arkivo: %s"
 #: archive.php:28
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr "Monata Arkivo: %s"
+msgstr "Monata arkivo: %s"
 
 #: archive.php:28
 msgid "F Y"
