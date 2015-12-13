@@ -10,9 +10,9 @@
  Text Domain:  punktoinfo
 */
 
-@import url("../twentythirteen/style.css");
+@import url('style-twentythirteen.css');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic&subset=latin,latin-ext');
-@import url("../twentythirteen/genericons/genericons.css");
+@import url("genericons/genericons.css");
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,15 +27,16 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
   font-family: "Open Sans";
   font-size: 14px;
   line-height: 1.5;
   color: #555;
+}
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 h1 {
@@ -205,6 +206,7 @@ input[type="reset"]:active {
 }
 
 ul#contact-buttons {
+    margin: 0;
     padding: 0px;
     width: 100%;
     height: 100%
@@ -312,6 +314,10 @@ img.title-image {
 
 /* Content */
 
+.hentry {
+	padding: 0px 0; */
+}
+
 .entry-header,
 .entry-content,
 .entry-summary,
@@ -336,15 +342,15 @@ img.title-image {
 .site-content h1 {
     font-weight: bold;
     font-size: x-large;
-    margin-bottom: 1em;
-    margin-top: 2em;
+    margin-bottom: .25em;
+    margin-top: 1em;
 }
 
 .site-content h2 {
     font-weight: bold;
     font-size: large;
-    margin-bottom: 1em;
-    margin-top: 2em;
+    margin-bottom: .5em;
+    margin-top: 1em;
 }
 
 .page-content {

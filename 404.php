@@ -19,7 +19,7 @@ get_header(); ?>
 			<div class="page-wrapper">
 				<div class="page-content">
 					<h2><?php _e( 'We don&rsquo;t know who has taken you here.', 'punktoinfo' ); ?></h2>
-					<p><?php _e( 'Maybe you clicked on a wrong or obselete link?<br>Or typed in a wrong address?', 'punktoinfo' ); ?></p>
+					<p><?php _e( 'Maybe you clicked on a wrong or obsolete link?<br>Or typed in a wrong address?', 'punktoinfo' ); ?></p>
 				</div><!-- .page-content -->
 			</div><!-- .page-wrapper -->
 

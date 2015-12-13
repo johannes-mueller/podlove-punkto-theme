@@ -26,7 +26,7 @@ msgstr "Ni ne scias kio venigis vin ĉi tien."
 
 #: 404.php:22
 msgid ""
-"Maybe you clicked on a wrong or obselete link?<br>Or typed in a wrong "
+"Maybe you clicked on a wrong or obsolete link?<br>Or typed in a wrong "
 "address?"
 msgstr ""
 "Ĉu vi eblei klakis eksvalidan ligilon?<br>Aŭ tajpis malĝustan adreson?"
