@@ -1,5 +1,10 @@
 </div><!-- #main -->
 <footer id="colophon" class="site-footer" role="contentinfo">
+	<?php if ( get_theme_mod( 'punktoinfo_footer_logo' ) ) : ?>
+		<div class="footer-logo">
+			<img class="footer-logo" src="<?php echo esc_url( get_theme_mod( 'punktoinfo_footer_logo' ) ); ?>">
+		</div>
+	<?php endif ?>
 	<?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
 		<div class="footer-elements">
 			<?php dynamic_sidebar( 'footer_1' ) ?>

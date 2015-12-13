@@ -25,6 +25,24 @@ function punktoinfo_setup()
 add_action( 'after_setup_theme', 'punktoinfo_setup' );
 
 
+function punktoinfo_theme_customizer( $wp_customize ) {
+	$wp_customize->add_section( 'punktoinfo_footer_logo_section', array(
+		'title'      => __( 'Footer logo', 'punktoinfo' ),
+		'priority'   => 100,
+		'descripton' => 'Upload a logo to appear in the footer.',
+	) );
+
+	$wp_customize->add_setting( 'punktoinfo_footer_logo' );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'punktoinfo_footer_logo', array(
+		'label'    => __( 'Logo image', 'punktoinfo' ),
+		'section'  => 'punktoinfo_footer_logo_section',
+		'settings' => 'punktoinfo_footer_logo',
+	) ) );
+}
+
+add_action( 'customize_register', punktoinfo_theme_customizer );
+
 function punktoinfo_post_nav() {
 	global $post;
 
