@@ -199,6 +199,7 @@ input[type="reset"]:active {
     background-color: #3A2A00;
     padding: 0px;
     position: fixed;
+    z-index: 100;
 }
 
 #contact-button-container {
