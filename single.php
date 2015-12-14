@@ -16,6 +16,7 @@ $e = \Podlove\get_episode();
 	<div id="featured-episode">
 		<div id="featured-episode-player">
 			<?php echo $e->player() ?>
+			<?php echo \Podlove\Template\TwigFilter::apply_to_html('@core/shortcode/downloads-select.twig') ?>
 		</div>
 		<div id="featured-episode-background" style="background-image: url('<?php echo $e->imageUrlWithFallback() ?>')">
 		</div>
