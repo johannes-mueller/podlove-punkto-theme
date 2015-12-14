@@ -21,8 +21,13 @@ function punktoinfo_setup()
 
         register_nav_menu( 'primary', __( 'Navigation Menu', 'punkto-info' ) );
 }
-
 add_action( 'after_setup_theme', 'punktoinfo_setup' );
+
+
+function punktoinfo_scripts_styles() {
+	wp_enqueue_style( 'punktoinfo-style', get_stylesheet_uri(), array() );
+}
+add_action( 'wp_enqueue_scripts', 'punktoinfo_scripts_styles' );
 
 
 function punktoinfo_theme_customizer( $wp_customize ) {

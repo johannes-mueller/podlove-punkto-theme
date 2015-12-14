@@ -32,7 +32,6 @@ $flattr_profile = $theme_options['flattr-profile'];
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<title><?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?></title>
 	<?php wp_head(); ?>
 	<script>window.podcastData = <?php echo $podcast_data ?></script>
