@@ -192,6 +192,10 @@ input[type="reset"]:active {
     min-height: 0px;
 }
 
+.search-field:focus {
+    border-top: 2px solid #3A1F00;
+}
+
 .contact-button-bar {
     height: 36px;
     width: 100%;
