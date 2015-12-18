@@ -1,4 +1,8 @@
 <?php
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+if (function_exists('podlove\\get_podcast')) {
+
 $podcast = \Podlove\get_podcast();
 
 foreach ($podcast->feeds() as $f) {
@@ -24,6 +28,11 @@ $twitter_profile = $theme_options['twitter-profile'];
 $vk_profile = $theme_options['vk-profile'];
 $flattr_profile = $theme_options['flattr-profile'];
 
+
+} else {
+	$podcast = 0;
+}
+
 ?>
 
 
@@ -38,6 +47,7 @@ $flattr_profile = $theme_options['flattr-profile'];
 </head>
 <body>
         <header id="masthead" class="site-header" role="banner">
+		<?php if ($podcast) : ?>
 		<div class="contact-button-bar">
 			<div id="contact-button-container">
 				<ul id="contact-buttons">
@@ -88,6 +98,7 @@ $flattr_profile = $theme_options['flattr-profile'];
 				</style>
 			</div>
 		</div>
+		<?php endif ?>
 		<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<img class="title-image" src="<?php echo get_header_image() ?>">
 		</a>
