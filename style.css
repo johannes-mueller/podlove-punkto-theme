@@ -392,7 +392,7 @@ img.episode-tile-image:hover {
 }
 
 #featured-episode {
-    padding: 72px;
+    padding: 144px 0;
     margin-bottom: 24px;
     text-align: center;
     vertical-align: middle;
@@ -416,6 +416,7 @@ img.episode-tile-image:hover {
 
 #featured-episode-player {
     width: 70%;
+    min-width: 300px;
     margin: 0 auto;
     text-align: left;
 }
