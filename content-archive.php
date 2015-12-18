@@ -5,7 +5,7 @@ $icon_size = 96;
 <tr class="archive-episode-row">
 	<?php if ($e) : ?>
 		<td class="archive-episode-icon">
-			<img src="<?php echo $e->imageUrlWithFallback() ?>" width="<?php echo $icon_size ?>" height="<?php echo $icon_size ?>">
+			<?php echo $e->image()->html( array("width" => $icon_size ) ) ?>
 		</td>
 		<td class="archive-episode-description">
 			<div class="episode-title">
