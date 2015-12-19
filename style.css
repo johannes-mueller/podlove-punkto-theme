@@ -190,6 +190,8 @@ input[type="reset"]:active {
 
 .site-header .home-link {
     min-height: 0px;
+    padding: 0px;
+    width: 100%;
 }
 
 .search-field:focus {
@@ -290,6 +292,7 @@ img.title-image {
     background-color: #fff;
     margin: 0 auto;
     width: 100%;
+    max-width: none;
     text-align: center;
     border-top: 2px solid #3A1F00;
     border-bottom: 2px solid #3A1F00;

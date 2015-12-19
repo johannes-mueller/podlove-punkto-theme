@@ -20,7 +20,7 @@ shuffle($eps);
 			?>
 				<div class="episode-tile">
 					<a href="<?php echo $e->url() ?>">
-						<?php echo $e->image()->html( array( "width" => 160, "class" => "episode-title-image" ) ) ?>
+						<?php echo $e->image()->html( array( "width" => 160, "class" => "episode-tile-image" ) ) ?>
 
 					</a>
 					<?php
