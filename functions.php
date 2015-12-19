@@ -216,7 +216,11 @@ add_action( 'admin_menu', 'punktoinfo_theme_options_page' );
 
 
 function punktoinfo_theme_options_init() {
-	register_setting( 'punktoinfo-settings-group', 'punktoinfo-setting' );
+        register_setting( 'punktoinfo-settings-group', 'punktoinfo-setting' );
+
+	add_settings_section( 'section-favicon', 'Favicon', 'section_favicon_callback', 'punktoinfo-options-page' );
+	add_settings_field( 'favicon-link', 'Link to favicon', 'favicon_field_callback', 'punktoinfo-options-page', 'section-favicon' );
+
 	add_settings_section( 'section-social', 'Social Networks', 'section_social_callback', 'punktoinfo-options-page' );
 	add_settings_field( 'facebook-profile', 'Facebook profile', 'facebook_field_callback', 'punktoinfo-options-page', 'section-social' );
 	add_settings_field( 'twitter-profile', 'Twitter profile', 'twitter_field_callback', 'punktoinfo-options-page', 'section-social' );
@@ -226,8 +230,18 @@ function punktoinfo_theme_options_init() {
 
 add_action( 'admin_init', 'punktoinfo_theme_options_init' );
 
+function favicon_field_callback() {
+	$setting_array = (array) get_option( 'punktoinfo-setting' );
+	$setting = esc_attr( $setting_array['favicon-link'] );
+	echo "<input type='text' name='punktoinfo-setting[favicon-link]' value='$setting'>";
+}
+
+function section_favicon_callback() {
+}
+
 function section_social_callback() {
 }
+
 
 function facebook_field_callback() {
 	$setting_array = (array) get_option( 'punktoinfo-setting' );

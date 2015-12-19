@@ -28,6 +28,7 @@ $twitter_profile = $theme_options['twitter-profile'];
 $vk_profile = $theme_options['vk-profile'];
 $flattr_profile = $theme_options['flattr-profile'];
 
+$favicon_link = $theme_options['favicon-link'];
 
 } else {
 	$podcast = 0;
@@ -42,6 +43,7 @@ $flattr_profile = $theme_options['flattr-profile'];
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<title><?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?></title>
+	<?php if ( $favicon_link ) : ?>	<link rel="icon" href="<?php echo $favicon_link ?>" type="image/vnd.microsoft.icon"><?php endif ?>
 	<?php wp_head(); ?>
 	<script>window.podcastData = <?php echo $podcast_data ?></script>
 </head>
