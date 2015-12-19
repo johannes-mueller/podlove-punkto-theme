@@ -5,7 +5,10 @@ $icon_size = 96;
 <tr class="archive-episode-row">
 	<?php if ($e) : ?>
 		<td class="archive-episode-icon">
-			<?php echo $e->image()->html( array("width" => $icon_size ) ) ?>
+			<?php
+			if ( $e->image() )
+				echo $e->image()->html( array("width" => $icon_size ) )
+			?>
 		</td>
 		<td class="archive-episode-description">
 			<div class="episode-title">

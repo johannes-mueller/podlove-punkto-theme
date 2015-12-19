@@ -20,7 +20,7 @@ get_header();
 		<div id="featured-episode-player">
 			<?php echo $featured_episode->player() ?>
 		</div>
-		<div id="featured-episode-background" style="background-image: url('<?php echo $featured_episode->imageUrlWithFallback() ?>')">
+		<div id="featured-episode-background" style="background-image: url('<?php echo $featured_episode->image() ?>')">
 		</div>
 	</div>
 	<div class="site-content">

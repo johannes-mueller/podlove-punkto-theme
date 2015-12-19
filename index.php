@@ -10,7 +10,7 @@ shuffle($eps);
 			<div id="featured-episode-player">
 				<?php echo $featured_episode->player() ?>
 			</div>
-			<div id="featured-episode-background" style="background-image: url('<?php echo $featured_episode->imageUrlWithFallback() ?>')">
+			<div id="featured-episode-background" style="background-image: url('<?php echo $featured_episode->image() ?>')">
 			</div>
 		</div>
 		<div id="random-episodes">
@@ -20,7 +20,8 @@ shuffle($eps);
 			?>
 				<div class="episode-tile">
 					<a href="<?php echo $e->url() ?>">
-						<img class="episode-tile-image" src="<?php echo $e->imageUrlWithFallback() ?>" width="160" height="160">
+						<?php echo $e->image()->html( array( "width" => 160, "class" => "episode-title-image" ) ) ?>
+
 					</a>
 					<?php
 					$i++;
