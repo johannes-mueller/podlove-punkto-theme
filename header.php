@@ -108,14 +108,10 @@ $favicon_link = $theme_options['favicon-link'];
 			<nav id="site-navigation" class="navigation main-navigation" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Menu', 'punkto.info' ); ?></button>
 				<?php
-				$actual_query = $wp_query;
-				$wp_query = NULL;
-				$wp_query = new WP_Query(array('post_type' => 'post'));
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'menu_class' => 'nav-menu',
 					'menu_id' => 'primary-menu' ) );
-				$wp_query = $actual_query;
 				?>
 				<?php get_search_form(); ?>
 			</nav><!-- #site-navigation -->
