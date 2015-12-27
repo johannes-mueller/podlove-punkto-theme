@@ -7,19 +7,19 @@ $podcast = \Podlove\get_podcast();
 
 foreach ($podcast->feeds() as $f) {
 	$feeds[] = array(
-		"type" => $f->asset()->fileType()->type(),
-			"format" => $f->asset()->fileType()->extension(),
-			"url" => $f->url(),
-			"variant" => "high"
+	    "type" => $f->asset()->fileType()->type(),
+	    "format" => $f->asset()->fileType()->extension(),
+	    "url" => $f->url(),
+	    "variant" => "high"
 	);
 }
 
 $podcast_data = json_encode( array(
         "title" => $podcast->title(),
-		"subtitle" => $podcast->subtitle(),
-		"description" => $podcast->summary(),
-		"cover" => $podcast->image()->url(),
-		"feeds" => $feeds
+	"subtitle" => $podcast->subtitle(),
+	"description" => $podcast->summary(),
+	"cover" => $podcast->image()->url(),
+	"feeds" => $feeds
 ),JSON_UNESCAPED_SLASHES);
 
 $theme_options = (array) get_option('punktoinfo-setting');
@@ -87,16 +87,16 @@ $favicon_link = $theme_options['favicon-link'];
 					</li>
 				</ul>
 				<style>
-				#FB       { background-image: url('/wp-content/themes/punktoinfo/images/FB_blanka.svg'); }
-				#FB:hover { background-image: url('/wp-content/themes/punktoinfo/images/FB_inversa.svg'); }
-				#VK       { background-image: url('/wp-content/themes/punktoinfo/images/VK_blanka.svg'); }
-				#VK:hover { background-image: url('/wp-content/themes/punktoinfo/images/VK_inversa.svg'); }
-				#TW       { background-image: url('/wp-content/themes/punktoinfo/images/TW_blanka.svg'); }
-				#TW:hover { background-image: url('/wp-content/themes/punktoinfo/images/TW_inversa.svg'); }
-				#flattr       { background-image: url('/wp-content/themes/punktoinfo/images/flattr_blanka.svg'); }
-				#flattr:hover { background-image: url('/wp-content/themes/punktoinfo/images/flattr_inversa.svg'); }
-				#subscribe-button       { background-image: url('/wp-content/themes/punktoinfo/images/aboni_blanka.svg'); }
-				#subscribe-button:hover { background-image: url('/wp-content/themes/punktoinfo/images/aboni_inversa.svg'); }
+				 #FB       { background-image: url('/wp-content/themes/punktoinfo/images/FB_blanka.svg'); }
+				 #FB:hover { background-image: url('/wp-content/themes/punktoinfo/images/FB_inversa.svg'); }
+				 #VK       { background-image: url('/wp-content/themes/punktoinfo/images/VK_blanka.svg'); }
+				 #VK:hover { background-image: url('/wp-content/themes/punktoinfo/images/VK_inversa.svg'); }
+				 #TW       { background-image: url('/wp-content/themes/punktoinfo/images/TW_blanka.svg'); }
+				 #TW:hover { background-image: url('/wp-content/themes/punktoinfo/images/TW_inversa.svg'); }
+				 #flattr       { background-image: url('/wp-content/themes/punktoinfo/images/flattr_blanka.svg'); }
+				 #flattr:hover { background-image: url('/wp-content/themes/punktoinfo/images/flattr_inversa.svg'); }
+				 #subscribe-button       { background-image: url('/wp-content/themes/punktoinfo/images/aboni_blanka.svg'); }
+				 #subscribe-button:hover { background-image: url('/wp-content/themes/punktoinfo/images/aboni_inversa.svg'); }
 				</style>
 			</div>
 		</div>

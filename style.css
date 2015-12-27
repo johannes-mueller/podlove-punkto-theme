@@ -11,7 +11,7 @@
 */
 
 @import url('style-twentythirteen.css');
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic&subset=latin,latin-ext');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext');
 @import url("genericons/genericons.css");
 
 html, body, div, span, applet, object, iframe,
@@ -209,13 +209,14 @@ input[type="reset"]:active {
 
 #contact-button-container {
     float: right;
+    height: inherit;
 }
 
 ul#contact-buttons {
     margin: 0;
     padding: 0px;
     width: 100%;
-    height: 100%
+    height: 32px;
     list-style-type: none;
     list-style: none;
     display: flex;
@@ -232,7 +233,8 @@ a.podlove-subscribe-button-subscribeButton {
     height: 36px;
     width: 120px;
     display: block;
-    background-size: 120px, 36px;
+    background-size: 120px 36px;
+    box-sizing: border-box;
 }
 
 a.podlove-subscribe-button-subscribeButton {
@@ -240,6 +242,7 @@ a.podlove-subscribe-button-subscribeButton {
     font-size: 24px;
     color: white;
     background-color: #922100;
+    background-repeat: no-repeat;
     padding: 0px 6px;
     margin-right: 0px;
 }
@@ -413,7 +416,7 @@ img.episode-tile-image:hover {
     content : "";
     display: block;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
