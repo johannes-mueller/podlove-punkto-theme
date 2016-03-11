@@ -23,29 +23,18 @@ $icon_size = 96;
 			</div>
 		</td>
 		<td>
-			<div class="episode-contributor-avatars">
-				<?php
-				foreach ($e->contributors() as $c) {
-					if ($c->role() != "aŭtoro") {
-						printf('<img src="%1$s" title="%2$s" width="48" heigth="48">',
-							$c->avatar()->url(), $c->name());
-					}
-				}
-				?>
-			</div>
-		</td>
-		<td>
-			<div class="episode-contributor-names">
-				<?php
-				$contributer_seen = false;
-				foreach ($e->contributors() as $c) {
-					if ($c->role() != "aŭtoro") {
-						if ($contributer_seen) echo ", ";
-						printf('%1$s kiel %2$s', $c->name(), $c->role());
-						$contributer_seen = true;
-					}
-				}
-				?>
+			<?php foreach ($e->contributors() as $c) : ?>
+				<?php if ($c->role() != "aŭtoro") : ?>
+					<div class="episode-contributor">
+						<div class="episode-contributor-avatars">
+							<?php printf('<img src="%1$s" title="%2$s" width="48" heigth="48">', $c->avatar()->url(), $c->name()) ?>
+						</div>
+						<div class="episode-contributor-names">
+							<?php printf('%1$s kiel %2$s', $c->name(), $c->role()) ?>
+						</div>
+					</div>
+				<?php endif ?>
+			<?php endforeach ?>
 			</div>
 		</td>
 	<?php else : ?>

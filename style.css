@@ -625,11 +625,13 @@ tr.archive-episode-row {
 .archive-episode-row .episode-meta {
     font-weight: bold !important;
 }
-.archive-episode-row .episode-contributor-names {
-    font-weight: bold !important;
+.archive-episode-row div.episode-contributor-names {
+    display: inline-block;
 }
 .archive-episode-row div.episode-contributor-avatars {
-    vertica-align: middle;
+    display: inline-block;
+    margin-bottom: 4pt;
+    margin-right: 4pt;
 }
 .archive-episode-row div.episode-meta {
     vertical-align: baseline;
