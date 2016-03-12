@@ -85,6 +85,18 @@ $favicon_link = $theme_options['favicon-link'];
 						</script>
 						<a href="#" id="subscribe-button" class="podlove-subscribe-button-subscribeButton"></a>
 					</li>
+					<li class="feed-menu">
+						<a href="#"></a>
+						<ul>
+							<?php foreach ($podcast->feeds() as $f) : ?>
+								<li>
+									<a class="feed-menu-item" href="<?php echo $f->url() ?>">
+										<?php echo $f->asset()->fileType()->extension() ?>
+									</a>
+								</li>
+							<?php endforeach ?>
+						</ul>
+					</li>
 				</ul>
 				<style>
 				 #FB       { background-image: url('/wp-content/themes/punktoinfo/images/FB_blanka.svg'); }

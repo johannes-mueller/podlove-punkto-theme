@@ -223,11 +223,49 @@ ul#contact-buttons {
     display: flex;
 }
 
-a.contact-button  {
+a.contact-button, .feed-menu > a {
     width: 36px;
     height: 36px;
     display: block;
     background-size: 36px, 36px;
+}
+
+.feed-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.feed-menu > a {
+        background-image: url('/wp-content/themes/punktoinfo/images/feed-blanka.svg');
+}
+
+.feed-menu > a:hover {
+        background-image: url('/wp-content/themes/punktoinfo/images/feed-inversa.svg');
+}
+
+.feed-menu > ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    list-style: none;
+    background: #3A1F00;
+    color: black;
+    padding: 5px;
+}
+
+a.feed-menu-item {
+    color: white;
+    font-size: small;
+}
+
+
+a.feed-menu-item:hover {
+    color: #3A1F00;
+    background: white;
+}
+
+.feed-menu:hover > ul {
+    display: block;
 }
 
 a.podlove-subscribe-button-subscribeButton {
