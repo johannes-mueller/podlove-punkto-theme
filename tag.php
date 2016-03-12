@@ -35,6 +35,9 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 
+		<?php punktoinfo_paging_nav(); ?>
+
+
 	</div><!-- #content -->
 </div><!-- #primary -->
 
