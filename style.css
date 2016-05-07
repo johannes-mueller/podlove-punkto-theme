@@ -1,3 +1,4 @@
+
 /*
  Theme Name:   punktoinfo
  Theme URI:    http://example.com/twenty-fifteen-child/
@@ -498,6 +499,12 @@ img.episode-tile-image:hover {
     text-align: center;
 }
 
+@media screen and (max-width: 686px) {
+    #random-episodes {
+	width: 100%
+    }
+}
+
 #featured-episode {
     padding: 144px 0;
     margin-bottom: 24px;
@@ -523,9 +530,20 @@ img.episode-tile-image:hover {
 
 #featured-episode-player {
     width: 70%;
-    min-width: 300px;
     margin: 0 auto;
     text-align: left;
+}
+
+@media screen and (max-width: 686px) {
+    #featured-episode-player {
+	width: 479px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #featured-episode-player {
+	width: 100%;
+    }
 }
 
 #featured_episode_foreground {
