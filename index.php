@@ -10,7 +10,12 @@ shuffle($eps);
 			<div id="featured-episode-player">
 				<?php echo $featured_episode->player() ?>
 			</div>
-			<div id="featured-episode-background" style="background-image: url('<?php echo $featured_episode->image() ?>')">
+			<style scoped>
+			 @media screen and (min-width: 480px) {
+			     #featured-episode-background { background-image: url('<?php echo $featured_episode->image() ?>') }
+			 }
+			</style>
+			<div id="featured-episode-background">
 			</div>
 		</div>
 		<div id="random-episodes">
