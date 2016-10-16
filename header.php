@@ -48,6 +48,7 @@ $favicon_link = $theme_options['favicon-link'];
 	<script>window.podcastData = <?php echo $podcast_data ?></script>
 </head>
 <body>
+	<div><!-- page -->
         <header id="masthead" class="site-header" role="banner">
 		<?php if ($podcast) : ?>
 		<div class="contact-button-bar">
