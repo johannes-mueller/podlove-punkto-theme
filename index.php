@@ -25,7 +25,13 @@ shuffle($eps);
 			?>
 				<div class="episode-tile">
 					<a href="<?php echo $e->url() ?>">
-						<?php echo $e->image()->html( array( "width" => 160, "class" => "episode-tile-image" ) ) ?>
+						<?php
+						$img = $e->image();
+						if ( !$img ) {
+							$img = \Podlove\get_podcast()->image();
+						}
+						echo $img->html( array( "width" => 160, "class" => "episode-tile-image" ) );
+						?>
 
 					</a>
 					<?php
