@@ -6,8 +6,10 @@ $icon_size = 96;
 	<?php if ($e) : ?>
 		<td class="archive-episode-icon">
 			<?php
-			if ( $e->image() )
-				echo $e->image()->html( array("width" => $icon_size ) )
+			$img = $e->image();
+			if ( !$img )
+				$img = \Podlove\get_podcast()->image();
+			echo $img->html( array("width" => $icon_size ) )
 			?>
 		</td>
 		<td class="archive-episode-description">

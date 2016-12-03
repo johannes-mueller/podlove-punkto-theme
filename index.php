@@ -11,9 +11,14 @@ shuffle($eps);
 				<?php echo $featured_episode->player() ?>
 			</div>
 			<style scoped>
-			 @media screen and (min-width: 480px) {
-			     #featured-episode-background { background-image: url('<?php echo $featured_episode->image() ?>') }
-			 }
+			<?php
+			$img = $featured_episode->image();
+			if ( !$img )
+				$img = \Podlove\get_podcast()->image();
+			?>
+			@media screen and (min-width: 480px) {
+			    #featured-episode-background { background-image: url('<?php echo $img ?>') }
+			}
 			</style>
 			<div id="featured-episode-background">
 			</div>
