@@ -48,7 +48,7 @@ $favicon_link = $theme_options['favicon-link'];
 	<script>window.podcastData = <?php echo $podcast_data ?></script>
 </head>
 <body>
-	<div><!-- page -->
+	<div id="page"><!-- page -->
         <header id="masthead" class="site-header" role="banner">
 		<?php if ($podcast) : ?>
 		<div class="contact-button-bar">
@@ -112,7 +112,7 @@ $favicon_link = $theme_options['favicon-link'];
 				 #subscribe-button:hover { background-image: url('/wp-content/themes/punktoinfo/images/aboni_inversa.svg'); }
 				</style>
 			</div>
-		</div>
+                </div>
 		<?php endif ?>
 		<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<img class="title-image" src="<?php echo get_header_image() ?>">

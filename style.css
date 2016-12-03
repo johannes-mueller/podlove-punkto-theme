@@ -135,6 +135,10 @@ input[type="reset"]:active {
 }
 
 
+#page {
+    overflow-x: hidden;
+}
+
 .comment-author .fn,
 .comment-author .url,
 .comment-reply-link,
