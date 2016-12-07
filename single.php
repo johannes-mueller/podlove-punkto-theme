@@ -39,7 +39,13 @@ $icon_size = 96;
 			<?php get_template_part( 'content', get_post_format() );  ?>
 			<?php if ($e) : ?>
 				<?php if ($releps) : ?>
-					<h2>Rilataj epizodeoj</h2>
+					<h2>
+						<?php if (count($releps) > 1) :?>
+							Rilataj epizodoj
+						<?php else : ?>
+							Rilata epizodo
+						<?php endif ?>
+					</h2>
 					<table class="archive-table">
 						<colgroup>
 							<col id="episode-icon" width="<?php echo $icon_size + 16 ?>" />
