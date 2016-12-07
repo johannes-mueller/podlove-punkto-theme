@@ -1,8 +1,14 @@
 </div><!-- #main -->
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<?php if ( get_theme_mod( 'punktoinfo_footer_logo' ) ) : ?>
+        <?php $footer_logo = get_theme_mod( 'punktoinfo_footer_logo' )  ?>
+	<?php if ( $footer_logo ) : ?>
+		<?php
+			if (stripos($footer_logo, 'http://') === 0) {
+				$footer_logo = 'https' . substr($footer_logo, 4);
+			}
+		?>
 		<div class="footer-logo">
-			<img class="footer-logo" src="<?php echo esc_url( get_theme_mod( 'punktoinfo_footer_logo' ) ); ?>">
+			<img class="footer-logo" src="<?php echo esc_url($footer_logo); ?>">
 		</div>
 	<?php endif ?>
 	<?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
