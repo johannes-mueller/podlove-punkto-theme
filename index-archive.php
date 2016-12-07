@@ -26,7 +26,7 @@ get_header();
 	<div class="site-content">
 		<table class="archive-table">
 			<colgroup>
-				<col id="episode-icon" width="<?php echo $icon-size + 16 ?>" />
+				<col id="episode-icon" width="<?php echo $icon_size + 16 ?>" />
 				<col id="episode-description" />
 				<col id="episode-contributors" />
 			</colgroup>
