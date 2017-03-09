@@ -487,3 +487,15 @@ add_filter('get_calendar', 'punktoinfo_get_episode_calendar', 1, 2);
 
 
 load_theme_textdomain( 'punktoinfo', get_template_directory().'/languages/' );
+
+
+add_filter('comment_moderation_recipients', 'override_comment_notice_repicient', 10, 2);
+add_filter('comment_notification_recipients', 'override_comment_notice_repicient', 10, 2);
+function override_comment_notice_repicient($emails, $comment_id) {
+    $comment = get_comment( $comment_id );
+    if ( empty( $comment ) )
+	return $emails;
+
+    return array('kontakto@punkto.info');
+}
+?>
