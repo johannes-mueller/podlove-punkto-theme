@@ -165,12 +165,12 @@ function punktoinfo_entry_date( $echo = true ) {
  */
 
 function punktoinfo_print_duration( $duration ) {
-	echo '&#x23f1;&nbsp';
+	echo '&#x23f1;&nbsp;';
 	$h = $duration->hours();
 	if ( $h == 1 ) {
 		printf('1 horo ');
 	} elseif ( $h != 0 ) {
-		printf('%d hours ', $h);
+		printf('%d horoj ', $h);
 	}
 
 	$m = $duration->minutes();
