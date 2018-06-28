@@ -776,6 +776,13 @@ td.archive-episode-description {
     width: 50%;
 }
 
+.episode-contributor-avatars > img {
+    width: 48px;
+    height: 48px;
+}
+.archive-episode-icon img {
+    width: 96px;
+}
 
 .comments-title,
 .comment-list,

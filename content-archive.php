@@ -1,6 +1,5 @@
 <?php
 $e = \Podlove\get_episode();
-$icon_size = 96;
 ?>
 <tr class="archive-episode-row">
 	<?php if ($e) : ?>
@@ -9,7 +8,7 @@ $icon_size = 96;
 			$img = $e->image();
 			if ( !$img )
 				$img = \Podlove\get_podcast()->image();
-			echo $img->html( array("width" => $icon_size ) )
+			echo $img->html( array("width" => 96, "alt" => " " ) )
 			?>
 		</td>
 		<td class="archive-episode-description">
@@ -29,7 +28,7 @@ $icon_size = 96;
 				<?php if ($c->role() != "aŭtoro") : ?>
 					<div class="episode-contributor">
 						<div class="episode-contributor-avatars">
-							<?php printf('<img src="%1$s" title="%2$s" width="48" heigth="48">', $c->avatar()->url(), $c->name()) ?>
+							<?php printf('<img src="%1$s" title="%2$s" alt="">', $c->avatar()->url(), $c->name()) ?>
 						</div>
 						<div class="episode-contributor-names">
 							<?php printf('%1$s kiel %2$s', $c->name(), $c->role()) ?>
@@ -37,19 +36,17 @@ $icon_size = 96;
 					</div>
 				<?php endif ?>
 			<?php endforeach ?>
-			</div>
 		</td>
 	<?php else : ?>
 		<td class="archive-episode-icon"></td>
-		<td colspan="3" class="archive-episode-description">
+		<td colspan="2" class="archive-episode-description">
 			<div class="episode-title">
 				<a href="<?php echo the_permalink() ?>"><?php echo the_title() ?></a>
 			</div>
 			<div class="episode-meta">
 				&#x1f4c5;&nbsp;<?php echo the_date() ?>
 			</div>
-			<div class="episode-excerpt"><?php echo the_content('',false,'') ?>
+			<div class="episode-excerpt"><?php echo the_content('',false,'') ?></div>
 		</td>
-
 	<?php endif ?>
 </tr>

@@ -115,7 +115,7 @@ $favicon_link = $theme_options['favicon-link'];
                 </div>
 		<?php endif ?>
 		<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<img class="title-image" src="<?php echo get_header_image() ?>">
+			<img class="title-image" alt="" src="<?php echo get_header_image() ?>">
 		</a>
 		<div id="navbar" class="navbar">
 			<nav id="site-navigation" class="navigation main-navigation" role="navigation">

@@ -10,7 +10,7 @@ shuffle($eps);
 			<div id="featured-episode-player">
 				<?php echo $featured_episode->player() ?>
 			</div>
-			<style scoped>
+			<style>
 			<?php
 			$img = $featured_episode->image();
 			if ( !$img )
@@ -29,26 +29,28 @@ shuffle($eps);
 			foreach ( $eps as $e):
 			?>
 				<div class="episode-tile">
-					<a href="<?php echo $e->url() ?>">
-						<?php
-						$img = $e->image();
-						if ( !$img ) {
-							$img = \Podlove\get_podcast()->image();
-						}
-						echo $img->html( array( "width" => 160, "class" => "episode-tile-image" ) );
-						?>
-
-					</a>
+				    <a href="<?php echo $e->url() ?>">
 					<?php
-					$i++;
-					if ( $i > 9 ) {
-						break;
+					$img = $e->image();
+					if ( !$img ) {
+					    $img = \Podlove\get_podcast()->image();
 					}
+					$title = $e->title();
+					echo $img->html( array( "width" => 160, "class" => "episode-tile-image", "alt" => "$title"  ) );
 					?>
+
+				    </a>
 				</div>
+				<?php
+				$i++;
+				if ( $i > 9 ) {
+				    break;
+				}
+				?>
 			<?php endforeach ?>
 		</div>
 	</div>
 	<div id="delimiter">
 	</div>
-	<?php get_footer(); ?>
+</div>
+<?php get_footer(); ?>
