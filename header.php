@@ -46,6 +46,16 @@ $favicon_link = $theme_options['favicon-link'];
 	<?php if ( $favicon_link ) : ?>	<link rel="icon" href="<?php echo $favicon_link ?>" type="image/vnd.microsoft.icon"><?php endif ?>
 	<?php wp_head(); ?>
 	<script>window.podcastData = <?php echo $podcast_data ?></script>
+	<script>
+function toggle_menu() {
+	var menu = document.getElementById("primary-menu");
+	if (menu.className === 'nav-menu') {
+		menu.className += ' unfold';
+	} else {
+		meu.className = 'nav-menu';
+	}
+}
+	</script>
 </head>
 <body>
 	<div id="page"><!-- page -->
@@ -124,6 +134,9 @@ $favicon_link = $theme_options['favicon-link'];
 				$backup = $wp_query;
 				$wp_query = NULL;
 				$wp_query = new WP_Query(array('post_type' => 'post'));
+				?>
+				<div class="menu-icon" onclick="toggle_menu()">☰</div>
+				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
 					'menu_class' => 'nav-menu',
