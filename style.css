@@ -541,7 +541,6 @@ img.episode-tile-image:hover {
 #featured-episode-player {
     width: 70%;
     margin: 0 auto;
-    text-align: left;
 }
 
 @media screen and (max-width: 699px) {
