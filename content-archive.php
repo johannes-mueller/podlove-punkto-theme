@@ -2,7 +2,7 @@
 $e = \Podlove\get_episode();
 ?>
 <tr class="archive-episode-row">
-	<?php if ($e) : ?>
+	<?php if ($e and $e->number() != '') : ?>
 		<td class="archive-episode-icon">
 			<?php
 			$img = $e->image();
@@ -37,7 +37,7 @@ $e = \Podlove\get_episode();
 				<?php endif ?>
 			<?php endforeach ?>
 		</td>
-	<?php else : ?>
+	<?php elseif ($e->number() != '') : ?>
 		<td class="archive-episode-icon"></td>
 		<td colspan="2" class="archive-episode-description">
 			<div class="episode-title">
