@@ -37,7 +37,7 @@ $e = \Podlove\get_episode();
 				<?php endif ?>
 			<?php endforeach ?>
 		</td>
-	<?php elseif ($e->number() != '') : ?>
+	<?php elseif ($e) : ?>
 		<td class="archive-episode-icon"></td>
 		<td colspan="2" class="archive-episode-description">
 			<div class="episode-title">
